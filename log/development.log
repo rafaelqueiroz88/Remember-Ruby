@@ -1,0 +1,620 @@
+Started GET "/" for 127.0.0.1 at 2018-01-25 14:52:24 -0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 287ms (Views: 28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 15:01:18 -0200
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (344.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (171.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK(1143268810739741490, 0)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAnnotations (20180125170102)
+  [1m[35m (199.4ms)[0m  [1m[35mCREATE TABLE `annotations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `body` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180125170102')[0m
+  [1m[35m (34.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-01-25 17:01:43', '2018-01-25 17:01:43')[0m
+  [1m[35m (24.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(1143268810739741490)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-01-25 15:01:51 -0200
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (6.0ms)
+Completed 200 OK in 62ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 15:01:54 -0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 51ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Annotation" for 127.0.0.1 at 2018-01-25 15:02:03 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/Annotation"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/Annotation" for 127.0.0.1 at 2018-01-25 15:02:21 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/Annotation"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/annotation" for 127.0.0.1 at 2018-01-25 15:02:26 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/annotation"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 15:02:33 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mAnnotation Load (1.0ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  Rendered annotations/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 2178ms (Views: 2152.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 15:07:13 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT `annotations`.* FROM `annotations`[0m
+  Rendered annotations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 115ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK(1143268810739741490, 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateFriends (20180125171011)
+  [1m[35m (250.3ms)[0m  [1m[35mCREATE TABLE `friends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `address` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180125171011')[0m
+  [1m[35m (28.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(1143268810739741490)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/friends" for 127.0.0.1 at 2018-01-25 15:11:43 -0200
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by FriendsController#index as HTML
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (1.0ms)[0m  [1m[34mSELECT `friends`.* FROM `friends`[0m
+  Rendered friends/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 610ms (Views: 578.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-01-25 15:13:20 -0200
+Processing by Rails::InfoController#routes as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.6ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 197ms (Views: 147.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2018-01-25 15:16:48 -0200
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by FriendsController#index as HTML
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (1.0ms)[0m  [1m[34mSELECT `friends`.* FROM `friends`[0m
+  Rendered friends/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 627ms (Views: 593.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 15:16:59 -0200
+Started GET "/" for 127.0.0.1 at 2018-01-25 15:16:59 -0200
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 244ms (Views: 210.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 237ms (Views: 201.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 15:19:02 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 161ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-25 16:07:22 -0200
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 318ms (Views: 288.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:07:37 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mAnnotation Load (1.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 145ms (Views: 121.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/annotations/new" for 127.0.0.1 at 2018-01-25 16:07:40 -0200
+Processing by AnnotationsController#new as HTML
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (24.1ms)
+  Rendered annotations/new.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 173ms (Views: 151.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/annotations" for 127.0.0.1 at 2018-01-25 16:07:55 -0200
+Processing by AnnotationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mDtJlZuCezulKby0JsbMcql+OXKSok/W3ts8hvKw38AZe3lsFOtEPYQFXJgxqnywnCN7V8fu4ky+nbR8GnpUJQ==", "annotation"=>{"body"=>"Se um dia eu pudesse ver"}, "commit"=>"Create Annotation"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.0ms)[0m  [1m[32mINSERT INTO `annotations` (`body`, `created_at`, `updated_at`) VALUES ('Se um dia eu pudesse ver', '2018-01-25 18:07:55', '2018-01-25 18:07:55')[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations/1
+Completed 302 Found in 70ms (ActiveRecord: 57.1ms)
+
+
+Started GET "/annotations/1" for 127.0.0.1 at 2018-01-25 16:07:55 -0200
+Processing by AnnotationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 1 LIMIT 1[0m
+  Rendering annotations/show.html.erb within layouts/application
+  Rendered annotations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 148ms (Views: 107.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:07:57 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (1.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 107ms (Views: 90.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/annotations/new" for 127.0.0.1 at 2018-01-25 16:08:00 -0200
+Processing by AnnotationsController#new as HTML
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (2.0ms)
+  Rendered annotations/new.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 127ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/annotations" for 127.0.0.1 at 2018-01-25 16:08:07 -0200
+Processing by AnnotationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bjvBCoIoK2ulbLhQqCtcTLSzCYZzSEhVbEww2mFJINDve/HzDUEUbYRAWHy/R+yOge5LoyYE5c8MCrggiYOrNQ==", "annotation"=>{"body"=>"Meu passado inteiro"}, "commit"=>"Create Annotation"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.1ms)[0m  [1m[32mINSERT INTO `annotations` (`body`, `created_at`, `updated_at`) VALUES ('Meu passado inteiro', '2018-01-25 18:08:07', '2018-01-25 18:08:07')[0m
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations/2
+Completed 302 Found in 50ms (ActiveRecord: 43.2ms)
+
+
+Started GET "/annotations/2" for 127.0.0.1 at 2018-01-25 16:08:07 -0200
+Processing by AnnotationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 2 LIMIT 1[0m
+  Rendering annotations/show.html.erb within layouts/application
+  Rendered annotations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 117ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:08:09 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 121ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations/new" for 127.0.0.1 at 2018-01-25 16:08:14 -0200
+Processing by AnnotationsController#new as HTML
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (1.0ms)
+  Rendered annotations/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 127ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/annotations" for 127.0.0.1 at 2018-01-25 16:08:37 -0200
+Processing by AnnotationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RPCm9Re6hqFr5ulh9voKpffoaHG9JZ/sr5fa1niMyLzFsJYMmNO5p0rKCU3hlrpnwrUqVOhpMnbP0VIskEZDWQ==", "annotation"=>{"body"=>"Não tinha medo o tal \"João de Santos Cristo\""}, "commit"=>"Create Annotation"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.0ms)[0m  [1m[32mINSERT INTO `annotations` (`body`, `created_at`, `updated_at`) VALUES ('Não tinha medo o tal \"João de Santos Cristo\"', '2018-01-25 18:08:37', '2018-01-25 18:08:37')[0m
+  [1m[35m (55.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations/3
+Completed 302 Found in 75ms (ActiveRecord: 68.2ms)
+
+
+Started GET "/annotations/3" for 127.0.0.1 at 2018-01-25 16:08:37 -0200
+Processing by AnnotationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 3 LIMIT 1[0m
+  Rendering annotations/show.html.erb within layouts/application
+  Rendered annotations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 117ms (Views: 98.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:08:39 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 118ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations/new" for 127.0.0.1 at 2018-01-25 16:08:43 -0200
+Processing by AnnotationsController#new as HTML
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (1.0ms)
+  Rendered annotations/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 131ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/annotations" for 127.0.0.1 at 2018-01-25 16:08:49 -0200
+Processing by AnnotationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UbczvjskW7qKZiM24JOnfNOBuv3Mi3ay5AHzPJuh9AzQ9wNHtE1kvKtKwxr3/xe+5tz42JnH2yiER3vGc2t/6Q==", "annotation"=>{"body"=>"Era o que todos diziam"}, "commit"=>"Create Annotation"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `annotations` (`body`, `created_at`, `updated_at`) VALUES ('Era o que todos diziam', '2018-01-25 18:08:49', '2018-01-25 18:08:49')[0m
+  [1m[35m (123.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations/4
+Completed 302 Found in 132ms (ActiveRecord: 123.3ms)
+
+
+Started GET "/annotations/4" for 127.0.0.1 at 2018-01-25 16:08:49 -0200
+Processing by AnnotationsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAnnotation Load (1.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 4 LIMIT 1[0m
+  Rendering annotations/show.html.erb within layouts/application
+  Rendered annotations/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 114ms (Views: 93.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:08:51 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 114ms (Views: 96.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations/new" for 127.0.0.1 at 2018-01-25 16:08:53 -0200
+Processing by AnnotationsController#new as HTML
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (3.0ms)
+  Rendered annotations/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 126ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/annotations" for 127.0.0.1 at 2018-01-25 16:09:33 -0200
+Processing by AnnotationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uGlARe/TVOaWy0qp02imewey8l3Aj1Q31Y15UM9OnPs5KXC8YLpr4LfnqoXEBBa5Mu+weJXD+a21y/GqJ4QXHg==", "annotation"=>{"body"=>"Game on"}, "commit"=>"Create Annotation"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `annotations` (`body`, `created_at`, `updated_at`) VALUES ('Game on', '2018-01-25 18:09:33', '2018-01-25 18:09:33')[0m
+  [1m[35m (24.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations/5
+Completed 302 Found in 33ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/annotations/5" for 127.0.0.1 at 2018-01-25 16:09:33 -0200
+Processing by AnnotationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 5 LIMIT 1[0m
+  Rendering annotations/show.html.erb within layouts/application
+  Rendered annotations/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 116ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:09:34 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  [1m[35m (21.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `annotations`[0m
+  Rendered annotations/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 138ms (Views: 97.8ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/annotations/new" for 127.0.0.1 at 2018-01-25 16:09:38 -0200
+Processing by AnnotationsController#new as HTML
+  Rendering annotations/new.html.erb within layouts/application
+  Rendered annotations/_form.html.erb (1.0ms)
+  Rendered annotations/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 132ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/annotations" for 127.0.0.1 at 2018-01-25 16:09:47 -0200
+Processing by AnnotationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YSFAijZIAWE7DPB4mTHwDNfqmBqD52mbF9aVPrZ3TbfgYXBzuSE+ZxogEFSOXUDO4rfaP9arxAF3kB3EXr3GUg==", "annotation"=>{"body"=>"Game out!"}, "commit"=>"Create Annotation"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `annotations` (`body`, `created_at`, `updated_at`) VALUES ('Game out!', '2018-01-25 18:09:47', '2018-01-25 18:09:47')[0m
+  [1m[35m (82.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations/6
+Completed 302 Found in 88ms (ActiveRecord: 82.2ms)
+
+
+Started GET "/annotations/6" for 127.0.0.1 at 2018-01-25 16:09:47 -0200
+Processing by AnnotationsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 6 LIMIT 1[0m
+  Rendering annotations/show.html.erb within layouts/application
+  Rendered annotations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 114ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:09:48 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `annotations`[0m
+  Rendered annotations/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 118ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations?page=2" for 127.0.0.1 at 2018-01-25 16:09:50 -0200
+Processing by AnnotationsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 5[0m
+  Rendered annotations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 116ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/annotations?page=1" for 127.0.0.1 at 2018-01-25 16:09:51 -0200
+Processing by AnnotationsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `annotations`[0m
+  Rendered annotations/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 125ms (Views: 107.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/annotations/1" for 127.0.0.1 at 2018-01-25 16:17:58 -0200
+Processing by AnnotationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1urhaDACRQmAaQiyDsTl/F1zcsqHPsy5eIfM+DqTf2JQw9nGsg5NBDK5BqAyD2IhbBqMXcgbWntYNwiXNY8jMg==", "id"=>"1"}
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (57.7ms)[0m  [1m[31mDELETE FROM `annotations` WHERE `annotations`.`id` = 1[0m
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations
+Completed 302 Found in 107ms (ActiveRecord: 85.8ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:17:58 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `annotations`[0m
+  Rendered annotations/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 252ms (Views: 215.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/annotations/2" for 127.0.0.1 at 2018-01-25 16:18:00 -0200
+Processing by AnnotationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"B3lnVLnoqE6q03DYsRCE3VPkOFmnN9bOOvr8d75OFDSBUF/6O+SgQxgDfsqN2wMAYo3GzugSQAwaSjgYsVJIZA==", "id"=>"2"}
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[31mDELETE FROM `annotations` WHERE `annotations`.`id` = 2[0m
+  [1m[35m (45.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations
+Completed 302 Found in 67ms (ActiveRecord: 52.1ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:18:00 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 149ms (Views: 120.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/annotations/3" for 127.0.0.1 at 2018-01-25 16:18:03 -0200
+Processing by AnnotationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QgYY7gga4/4YjACW/cUd5jG2YXFKC4Iva/sj+58wCx3ELyBAihbr86pcDoTBDpo7AN+f5gUuFO1LS+eUkCxXTQ==", "id"=>"3"}
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM `annotations` WHERE `annotations`.`id` = 3[0m
+  [1m[35m (36.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations
+Completed 302 Found in 46ms (ActiveRecord: 38.2ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:18:03 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 127ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/annotations/4" for 127.0.0.1 at 2018-01-25 16:18:05 -0200
+Processing by AnnotationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vS5O6JNeLSNRrCN0sBBY9XkDR2zZ/HgjEeIYQmeNR2Q7B3ZGEVIlLuN8LWaM298oSGq5+5bZ7uExUtwtaJEbNA==", "id"=>"4"}
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.9ms)[0m  [1m[31mDELETE FROM `annotations` WHERE `annotations`.`id` = 4[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations
+Completed 302 Found in 61ms (ActiveRecord: 54.4ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:18:05 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 126ms (Views: 105.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/annotations/5" for 127.0.0.1 at 2018-01-25 16:18:07 -0200
+Processing by AnnotationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"koTs5A87Qq84v2SFpgkDFeLWMJC1jzuf7zfRj6hcNQ4UrdRKjTdKoopvapeawoTI07/OB/qqrV3PhxXgp0BpXg==", "id"=>"5"}
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM `annotations` WHERE `annotations`.`id` = 5[0m
+  [1m[35m (43.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations
+Completed 302 Found in 55ms (ActiveRecord: 45.4ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:18:07 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 126ms (Views: 106.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/annotations/6" for 127.0.0.1 at 2018-01-25 16:18:08 -0200
+Processing by AnnotationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/U3q3rXE5CoEqfydw2E5j96lUhHK0R/74FXdTq06s057ZNJwN8jsJ7Z58o//qr5S78yshoX0iTnA5RkhoibvHg==", "id"=>"6"}
+  [1m[36mAnnotation Load (0.5ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` WHERE `annotations`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `annotations` WHERE `annotations`.`id` = 6[0m
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/annotations
+Completed 302 Found in 42ms (ActiveRecord: 30.9ms)
+
+
+Started GET "/annotations" for 127.0.0.1 at 2018-01-25 16:18:08 -0200
+Processing by AnnotationsController#index as HTML
+  Rendering annotations/index.html.erb within layouts/application
+  [1m[36mAnnotation Load (0.0ms)[0m  [1m[34mSELECT  `annotations`.* FROM `annotations` LIMIT 5 OFFSET 0[0m
+  Rendered annotations/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 125ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
